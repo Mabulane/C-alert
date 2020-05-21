@@ -1,0 +1,199 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(217, 232, 233, 0.1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+/*-----------------------header----------------------- */
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: 1;
+
+}
+.header ul{
+    top:44px;
+    height: 80%;
+    width: 190px;
+    list-style: none;
+    /*background: rgba(240, 222, 215, 0.12);*/
+    overflow: hidden;
+    position: fixed;
+}
+
+.header ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid rgba(250, 244, 244,0.1);
+}
+.header ul a:hover{
+    padding-top: 10px;
+    font: bold;
+    color:#ff2f;
+}
+  
+.header .menu { 
+    clear: both;
+    max-width: 0;
+    /*transition:max-height .2s ease-out;*/
+    transition:max-width .3s ease-out;
+}
+.header .menu-icon{
+border:  none;
+padding: 28px 20px;
+position: relative;
+float: right;
+cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    display: block;
+    background: #333;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .3s ease-out;
+}
+/*2 sude item */
+.header .menu-icon .nav-icon:before{
+   display:block;
+   background: #333;
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   top:5px;
+
+}
+.header .menu-icon .nav-icon:after{
+    display:block;
+    background: #333;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top:-5px;
+ }
+ .header .menu-btn{
+     display: none;
+ }
+ /*Sudo selector*/
+ /*-----------------------cross*/
+ .header .menu-btn:checked ~ .menu{
+     max-height:100%; 
+     max-width: 100%;
+     background: black;
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+ }
+
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    top:0;
+    transform: rotate(45deg);
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header a{
+    text-decoration: none;
+    list-style: none;
+    display:inline-block;
+    padding: 20px;
+    font-size: 21px;
+    color: white;
+    font: bold;
+}
+/*-----------------------main----------------------- */
+.main{
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    background: rgba(217, 232, 233, 0.1);
+    position: fixed;
+
+}
+/*-----------------------seachbox */
+.main .searchBox {
+top: 10px;
+    position: relative;
+    float:RIGHT;
+}
+.main .searchBox input{
+    width: 250px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.content{
+    background: floralwhite;
+    width: 50%;
+    left:20%;
+    height: 800px;
+    top: 130px;
+    box-sizing: border-box;
+    border-radius: 2%;
+    box-shadow:50px;
+    position: fixed;
+}
+ .alertbox{
+    width: 50%;
+    height: 130px;
+    position: relative;
+    background: red;
+    margin: 11px auto;
+}
+.main .filter{
+    top: 130px;
+    right: 0;
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background: beige;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+ .filter h3{
+    font-size:30px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+/*-----------------------footer----------------------- 
+.footer{
+    background: rgb(235, 63, 11);
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+@media(min-width:48em){
+    .header li{
+        float: left;
+    }
+        .header li a{
+           padding: 20px 30px; 
+
+        }
+        .header .menu{
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .header .menu-icon{
+            display: none;      
+        }
+}*/

@@ -1,0 +1,251 @@
+body{
+    padding: 0;
+    margin: 0;
+    font:15px/1.5 Arial, Helvetica, sans-serif;
+    background: #d9e8e91a;
+    background: url(gender-based.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+/*-----------------------header----------------------- */
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background:rgb(73, 198, 230);
+    z-index: 1;
+}
+.header ul{
+    top: 44px;
+    list-style: none;
+    background: #6cd0ffa9;
+    overflow: hidden;
+    position: fixed;  /*NB if removed only 1 a tag appear on the nev */
+    width: 100%;
+
+}
+
+.header ul a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid rgba(250, 244, 244,0.1);
+}
+.header ul a:hover{
+    padding-top: 10px;
+    font: bold;
+    color:rgb(73, 198, 230);
+}
+  
+.header .menu { 
+    clear: both;
+    max-height:0 ;
+    transition:max-height .2s ease-out;
+}
+.header .menu-icon{
+border:  none;
+padding: 28px 20px;
+position: relative;
+float: right;
+cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .3s ease-out;
+}
+/*2 sude item */
+.header .menu-icon .nav-icon:before{
+   display:block;
+   background: white;
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   top:5px;
+
+}
+.header .menu-icon .nav-icon:after{
+    display:block;
+    background: white;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top:-5px;
+ }
+ .header .menu-btn{
+     display: none;
+ }
+ /*Sudo selector*/
+ /*-----------------------cross*/
+ .header .menu-btn:checked ~ .menu{
+     max-height:100%; 
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+ }
+
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    top:0;
+    transform: rotate(45deg);
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header a{
+    text-decoration: none;
+    list-style: none;
+    display:inline-block;
+    padding: 20px;
+    font-size: 21px;
+    color: white;
+    font: bold;
+}
+/*----------------------Main---------------------------------*/
+#home{
+    backface-visibility: hidden;
+    height: 400px;
+    color:rgb(38, 172, 206);
+    background: url('../image/.jpg') ;   
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-size: 20px;
+
+}
+.smallbox{
+    padding-top: 40px;
+   text-align: center;
+}
+.container {
+    height: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+.container p ,h1 ,h2,h3{
+    padding-left: 50px;    
+}
+#s2{
+    background-image: url('../image/justice2.jpg');
+    color: white;
+   
+}
+#s3{
+   
+    color: black;
+
+}#s4{
+    background-image: url('../image/justice1.jpg') ;
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+}
+.middleContainer p , h1 ,H4{
+    text-align: center;
+    
+}
+
+/*----------------------form---------------------------------*/
+.details{
+    background: rgb(218, 209, 209);
+    padding: 20px 20px;
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+.details p{
+    padding-left: 15%;    
+}
+.contact{
+    
+    line-height: 50px;
+    width: 50%;
+    margin-left: 21% ;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    background:rgb(75, 168, 255);
+    overflow: hidden;
+}
+.contact .button{
+    border-radius: 50%;
+    margin: 0 auto;
+}/*----------------------Direction---------------------------------*/
+.direction{
+    width: 90%;
+    margin: 0 auto;
+}
+.map{
+   
+    border-radius: 1%;
+}
+
+/*----------------------header font---------------------------------*/
+h1{
+    font-size: 35px;
+
+}
+/*----------------------fOOTER---------------------------------*/
+footer{
+    /*background: rgb(217, 232, 233, 0.1);*/
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: white;
+    background:rgb(38, 172, 206);
+}
+
+
+
+
+
+@media(min-width:48em){
+    .header ul li{
+
+        float: right;
+    }
+        .header li a{
+           padding: 20px ; 
+
+        }
+        .header .menu{
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .header .menu-icon{
+            display: none;      
+        }
+}
+
+
+
+
+
+
+
+
+
+/*future use
+/*----------------------video like stracture---------------------------------
+#home{
+    top: 100px;
+    position: fixed;
+    color: rgb(238, 246, 248);
+    text-align: center;
+    background: url('../image/voilent.jpg') ;   
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+}*/
