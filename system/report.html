@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sys.css">
+    <title>Report</title>
+    
+</head>
+<body>
+  
+  <div class="mainContainer">
+    <header class="header">
+               <a href="/">C-Alert</a>
+               <input class="menu-btn" type="checkbox"  id="menu-btn">
+               <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul  class="menu">
+           <li><a href="profile.html">Profile</a></li>
+          <li><a href="system.html">Home</a></li>
+          <li><a href="#">Alert</a></li>
+          <li><a href="alert.html">Send</a></li>
+          <li><a href="inbox.html">Inbox</a></li>
+          <li><a href="report.html">Report</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="support.html">Contact</a></li>
+          <li><a href="logout.html">Logout</a></li>
+       </ul>     
+   </header>
+<br><br><br>
+    
+    <form class="container" action="" method="get">
+        <form method="post" enctype="multipart/form-data">
+            <div>
+              <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+              <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+            </div>
+            <div class="preview">
+              <p>No files currently selected for upload</p>
+            </div>
+            <div>
+              <button>Submit</button>
+            </div>
+          </form>
+    </form>
+
+</body>
+</html>

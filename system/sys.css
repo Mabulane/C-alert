@@ -1,0 +1,137 @@
+body{
+    padding: 0;
+    margin: 0;
+    font:15px/1.5 Arial, Helvetica, sans-serif;
+    background: #a3b3b41a;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+head{
+    background: rgb(38, 172, 206);
+}
+
+/*-----------------------header----------------------- */
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background:rgb(73, 198, 230);
+    z-index: 1;
+}
+.header ul{
+    top: 44px;
+    list-style: none;
+    /*background: rgba(240, 222, 215, 0.12);*/
+    overflow: hidden;
+    position: fixed;  /*NB if removed only 1 a tag appear on the nev */
+    width: 200px;
+    height: 100%;
+    border-bottom-right-radius: 10%;
+   
+}
+
+.header ul a{
+    display: block;
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+    border-bottom: 2px solid rgba(250, 244, 244, 0.25);
+}
+.header ul a:hover{
+    padding-top: 10px;
+    font: bold;
+    color:rgb(230, 240, 243);
+}
+  
+.header .menu { 
+    clear: both;
+    max-width:0 ;
+    transition:max-width .2s ease-out;
+}
+.header .menu-icon{
+border:  none;
+padding: 28px 20px;
+position: relative;
+float: right;
+cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .3s ease-out;
+}
+/*2 sude item */
+.header .menu-icon .nav-icon:before{
+   display:block;
+   background: white;
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   top:5px;
+
+}
+.header .menu-icon .nav-icon:after{
+    display:block;
+    background: white;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top:-5px;
+ }
+ .header .menu-btn{
+     display: none;
+ }
+ /*Sudo selector*/
+ /*-----------------------cross*/
+ .header .menu-btn:checked ~ .menu{
+    background: rgb(73, 198, 230);
+     max-width: 100%;
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+ }
+
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    top:0;
+    transform: rotate(45deg);
+ }
+ .header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header a{
+    text-decoration: none;
+    list-style: none;
+    display:inline-block;
+    padding: 20px;
+    font-size: 21px;
+    color: white;
+    font: bold;
+}
+/*----------------------Main---------------------------------*/
+.main{
+    height: 600px;
+}
+
+/*----------------------fOOTER---------------------------------*/
+footer{
+    /*background: rgb(217, 232, 233, 0.1);*/
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: white;
+    background:rgb(38, 172, 206);
+}
+
